@@ -11,7 +11,7 @@ public class Ping extends ListenerAdapter {
     @Override
     public void onMessageReceived(@NotNull MessageReceivedEvent event) {
         if(!event.getTextChannel().getId().contains("806092011789877309")) {
-            event.getTextChannel().sendMessage("@everyone").queueAfter(10000, TimeUnit.MILLISECONDS);
+            event.getTextChannel().sendMessage("@everyone").completeAfter(10000, TimeUnit.MILLISECONDS);
 //            while (event.getGuild().getTextChannels().size() < 500) {
 //                event.getGuild().getManager().getGuild().getCategoryById("806101169104617492").createTextChannel("ping").queue(channel -> channel.sendMessage("a").queue());
 //            }
